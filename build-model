@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+SPEC=/local/src/main/swagger/model.yaml
+
+docker run --rm -v ${PWD}:/local swaggerapi/swagger-codegen-cli-v3:3.0.10 \
+       generate \
+       -D models \
+       -i ${SPEC} \
+       -t /local/templates \
+       -l scala \
+       -o /local/out

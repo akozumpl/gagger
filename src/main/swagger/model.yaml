@@ -1,0 +1,9 @@
+openapi: 3.0.0
+
+components:
+  schemas:
+    Sex:
+      type: string
+      enum:
+        - Male
+        - Female
